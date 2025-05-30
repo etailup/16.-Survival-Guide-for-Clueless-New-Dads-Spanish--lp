@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍼 Manual Papás Novatos Torpes - ¡Descarga GRATIS!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-shadow { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .btn-hover:hover { transform: translateY(-2px); transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .pulse-animation { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); } /* Updated to 1.1 as per user's later script block */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 0.6s ease-out;
+        }
+        .fa-spinner {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Hero Section -->
+    <div class="gradient-bg min-h-screen flex items-center justify-center px-4 py-12 md:py-0">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+
+                <!-- Left Column - Content -->
+                <div class="text-white">
+                    <div class="mb-6">
+                        <span class="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
+                            🎯 GUÍA GRATIS
+                        </span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                        <span class="block">Manual de Supervivencia</span>
+                        <span class="block">para Papás Novatos</span>
+                        <span class="block text-yellow-300">¡Torpes!</span>
+                    </h1>
+
+                    <p class="text-xl mb-8 text-gray-200">
+                        La guía definitiva que te ayudará a navegar pañales explosivos, noches sin dormir y ataques de pánico. ¡Conviértete en el súper papá que tu bebé merece (o al menos sobrevive intentándolo)! 👶
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                            <span>Lista de equipo esencial (¡sin arruinarte!)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                            <span>Trucos para calmar el llanto y cambiar pañales como un pro</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                            <span>Consejos para mantener tu cordura (y tu relación) intacta</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                            <span>Humor y realidad para papás que no tienen ni idea</span>
+                        </div>
+                    </div>
+
+                    <div class="text-2xl font-bold text-yellow-300">
+                        100% GRATIS - ¡Sin trampas ni cartón!
+                    </div>
+                </div>
+
+                <!-- Right Column - Form -->
+                <div class="bg-white rounded-2xl p-8 card-shadow">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                            ¡Descarga Tu Manual Ahora!
+                        </h3>
+                        <p class="text-gray-600">
+                            Introduce tus datos y recibe al instante la guía completa en tu email.
+                        </p>
+                    </div>
+
+                    <form id="leadForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-user mr-2"></i>Nombre completo
+                            </label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                                   placeholder="Tu nombre completo">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-envelope mr-2"></i>Correo electrónico
+                            </label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                                   placeholder="tu.email@ejemplo.com">
+                        </div>
+
+                        <!-- Hidden Fields -->
+                        <input type="hidden" id="language" name="language" value="Spanish">
+                        <input type="hidden" name="book_title" value="Manual de Supervivencia para Papás Novatos Torpes: Todos los Secretos para NO Volverse Loco entre Pañales Explosivos, Noches en Vela y Ataques de Pánico">
+                        <input type="hidden" name="main_category" value="Parenting">
+                        <input type="hidden" name="author" value="Jasmin O.">
+                        <input type="hidden" name="number_title" value="16. Survival Guide for Clueless New Dads">
+                        <input type="hidden" name="number_title_language" value="16. Survival Guide for Clueless New Dads (Spanish)">
+                        <input type="hidden" name="extra_folder_link" value="https://drive.google.com/drive/folders/19UGnOXJRyFNzPGQ8R8D_zCP1gRjqB7f2">
+                        <input type="hidden" name="extra_pdf_link" value="https://drive.google.com/uc?export=download&id=1Cz1fJkgj9VV7g0S3CAy6X46WiXRL4068">
+                        <input type="hidden" name="review_link" value="https://pxl.to/16-mdsppnt-jo-es-review">
+
+                        <button type="submit"
+                                class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-6 rounded-lg btn-hover pulse-animation">
+                            <i class="fas fa-download mr-2"></i>
+                            QUIERO MI GUÍA GRATIS
+                        </button>
+                    </form>
+
+                    <div class="mt-6 text-center">
+                        <p class="text-xs text-gray-500">
+                            <i class="fas fa-lock mr-1"></i>
+                            Tus datos están seguros. Odiamos el spam tanto como tú.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    ¿Qué Descubrirás en Este Manual?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Una guía práctica y con mucho humor para que no te sientas (tan) perdido en esta nueva aventura.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg bg-blue-50">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-baby-carriage text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Preparativos Clave</h3>
+                    <p class="text-gray-600">
+                        Desde la cuna hasta el chupete: qué necesitas realmente y qué es solo parafernalia.
+                    </p>
+                </div>
+
+                <div class="text-center p-6 rounded-lg bg-green-50">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-moon text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">El Día a Día (¡Uf!)</h3>
+                    <p class="text-gray-600">
+                        Cómo sobrevivir a los pañales nivel experto, los eructos misteriosos y las noches eternas.
+                    </p>
+                </div>
+
+                <div class="text-center p-6 rounded-lg bg-purple-50">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Mantén la Calma</h3>
+                    <p class="text-gray-600">
+                        Estrategias para no perder la cabeza, pedir ayuda y hasta disfrutar el caos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    Lo Que Dicen Otros Papás (Aún Vivos)
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg card-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">J</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Jorge P.</h4>
+                            <p class="text-gray-600 text-sm">Papá novato de Leo</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "¡Este manual me salvó! Creía que iba a ser un desastre, pero con estos consejos y un poco de humor, ¡hasta parece que sé lo que hago! Gracias."
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg card-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">D</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">David S.</h4>
+                            <p class="text-gray-600 text-sm">Padre de mellizas (y sin ojeras)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "Si te sientes torpe y superado, necesitas esta guía. Directa, divertida y súper útil. ¡Imprescindible para cualquier papá novato!"
+                    </p>
+                    <div class="mt-4 text-yellow-500">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="gradient-bg py-20">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-3xl font-bold text-white mb-6">
+                ¡No Te Quedes Atrás! Descarga Tu Manual de Supervivencia
+            </h2>
+            <p class="text-xl text-gray-200 mb-8">
+                Miles de papás novatos ya están aplicando estos trucos. ¡Únete al club de los que (casi) saben lo que hacen!
+            </p>
+            <a href="#leadForm" class="inline-block bg-yellow-400 text-black font-bold py-4 px-8 rounded-lg btn-hover text-lg">
+                <i class="fas fa-arrow-up mr-2"></i>
+                SÍ, ¡QUIERO MI GUÍA AHORA!
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Manual Papás Novatos Torpes. Todos los derechos reservados.</p>
+            <p class="text-gray-400 text-sm mt-2">
+                <i class="fas fa-lock mr-1"></i>
+                Tus datos están a salvo con nosotros.
+            </p>
+        </div>
+    </footer>
+
+<script>
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitButton = e.target.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
+        const userEmail = document.getElementById('email').value;
+
+        // Show loading state
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>ENVIANDO...';
+        submitButton.disabled = true;
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: userEmail,
+            language: document.getElementById('language').value,
+            book_title: document.querySelector('input[name="book_title"]').value,
+            main_category: document.querySelector('input[name="main_category"]').value,
+            author: document.querySelector('input[name="author"]').value,
+            number_title: document.querySelector('input[name="number_title"]').value,
+            number_title_language: document.querySelector('input[name="number_title_language"]').value,
+            extra_folder_link: document.querySelector('input[name="extra_folder_link"]').value,
+            extra_pdf_link: document.querySelector('input[name="extra_pdf_link"]').value,
+            review_link: document.querySelector('input[name="review_link"]').value
+        };
+
+        try {
+            const response = await fetch('https://hook.integrator.boost.space/mqntylhrehljw4p5tkxjpxj28icglsot', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                // Show success - Email sent
+                submitButton.innerHTML = '<i class="fas fa-envelope-circle-check mr-2"></i>¡EMAIL ENVIADO!';
+                submitButton.classList.remove('from-blue-600', 'to-purple-600');
+                submitButton.classList.add('bg-green-500');
+                
+                // Show confirmation message after brief delay
+                setTimeout(() => {
+                    showEmailSuccessMessage(userEmail);
+                    hideForm();
+
+                    // Redirect after another delay, so user can see the message
+                    setTimeout(() => {
+                        window.location.href = 'https://drive.google.com/uc?export=download&id=1Cz1fJkgj9VV7g0S3CAy6X46WiXRL4068';
+                    }, 4000); // Redirect after 4 seconds of showing the success message (longer for reading)
+
+                }, 1000); // Show success message display logic after 1 second
+
+            } else {
+                // Handle server errors
+                const errorData = await response.json().catch(() => ({}));
+                console.error('Server error:', response.status, errorData);
+                throw new Error(`Server error: ${response.status}`);
+            }
+
+        } catch (error) {
+            console.error('Submission error:', error);
+
+            // Show error state
+            submitButton.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i>ERROR - INTÉNTALO DE NUEVO';
+            submitButton.classList.remove('from-blue-600', 'to-purple-600');
+            submitButton.classList.add('bg-red-500');
+
+            // Reset button after delay
+            setTimeout(() => {
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+                submitButton.classList.remove('bg-red-500');
+                submitButton.classList.add('from-blue-600', 'to-purple-600');
+            }, 4000);
+        }
+    });
+
+    // Function to show email success message
+    function showEmailSuccessMessage(email) {
+        const formContainer = document.getElementById('leadForm').parentElement;
+
+        // Create success message container
+        const successMessage = document.createElement('div');
+        successMessage.id = 'successMessage';
+        successMessage.className = 'mt-6 p-8 bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-300 rounded-2xl text-center animate-fadeIn';
+        successMessage.innerHTML = `
+            <div class="text-gray-800">
+                <div class="mb-6">
+                    <i class="fas fa-envelope-circle-check text-6xl text-green-500 mb-4 pulse-animation"></i>
+                </div>
+
+                <h3 class="text-2xl font-bold mb-4 text-green-800">
+                    🎉 ¡Perfecto! Revisa Tu Correo Electrónico
+                </h3>
+
+                <div class="bg-white p-4 rounded-lg border border-gray-200 mb-6">
+                    <p class="text-lg mb-2">
+                        Tu <strong>Manual de Supervivencia para Papás Novatos Torpes</strong> ha sido enviado a:
+                    </p>
+                    <p class="text-xl font-semibold text-blue-600 break-all">
+                        📧 ${email}
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                        <i class="fas fa-clock text-yellow-600 mb-2"></i>
+                        <h4 class="font-semibold text-yellow-800 mb-1">Entrega Inmediata</h4>
+                        <p class="text-sm text-yellow-700">El email debería llegar en 2-3 minutos</p>
+                    </div>
+
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <i class="fas fa-download text-blue-600 mb-2"></i>
+                        <h4 class="font-semibold text-blue-800 mb-1">Descarga Directa</h4>
+                        <p class="text-sm text-blue-700">Enlace de descarga en el email</p>
+                    </div>
+                </div>
+
+                <div class="bg-red-50 p-4 rounded-lg border border-red-200 mb-6">
+                    <h4 class="font-semibold text-red-800 mb-2">
+                        <i class="fas fa-search mr-2"></i>¿No ves el email?
+                    </h4>
+                    <div class="text-sm text-red-700 space-y-1">
+                        <p>✓ Revisa tu carpeta de <strong>Spam/Correo no deseado</strong></p>
+                        <p>✓ Busca "<strong>Manual Papás Novatos</strong>" en tu bandeja de entrada</p>
+                        <p>✓ Revisa la pestaña <strong>Promociones</strong> (Gmail)</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Serás redirigido a la descarga en unos segundos...</p>
+
+                <div class="text-sm text-gray-600">
+                    <p class="mb-2">
+                        <i class="fas fa-shield-alt mr-2 text-green-500"></i>
+                        Email enviado de forma segura • Privacidad garantizada
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-4">
+                        <button onclick="showManualDownload()" class="text-blue-600 hover:text-blue-800 underline font-semibold">
+                            <i class="fas fa-life-ring mr-1"></i>
+                            ¿Problemas con el email?
+                        </button>
+
+                        <button onclick="resendEmail()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-200">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Reenviar Email
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        formContainer.appendChild(successMessage);
+
+        // Scroll to success message
+        setTimeout(() => {
+            successMessage.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }, 500);
+    }
+
+    // Function to hide the form after successful submission
+    function hideForm() {
+        const form = document.getElementById('leadForm');
+        if (form) {
+            form.style.transition = 'opacity 0.5s ease';
+            form.style.opacity = '0.3';
+            form.style.pointerEvents = 'none';
+
+            // Hide the title and subtitle above the form too
+            const formTitle = form.previousElementSibling.previousElementSibling; //h3
+            const formSubtitle = form.previousElementSibling; //p
+            if(formTitle) formTitle.style.display = 'none';
+            if(formSubtitle) formSubtitle.style.display = 'none';
+        }
+    }
+
+
+    // Function to show manual download option
+    function showManualDownload() {
+        const successMessage = document.getElementById('successMessage');
+        if (!successMessage) return;
+
+        // Check if manual download is already shown
+        if (successMessage.querySelector('.manual-download-section')) return;
+
+        const manualDownloadDiv = document.createElement('div');
+        manualDownloadDiv.className = 'manual-download-section mt-4 p-4 bg-orange-50 border border-orange-300 rounded-lg';
+        manualDownloadDiv.innerHTML = `
+            <h4 class="font-semibold text-orange-800 mb-3">
+                <i class="fas fa-hand-point-right mr-2"></i>
+                Descarga Manual de Emergencia
+            </h4>
+            <p class="text-orange-700 mb-3 text-sm">
+                Si el email no llega o tienes problemas, puedes descargar el manual directamente:
+            </p>
+            <a href="https://drive.google.com/uc?export=download&id=1Cz1fJkgj9VV7g0S3CAy6X46WiXRL4068"
+               target="_blank"
+               class="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition duration-200">
+                <i class="fas fa-download mr-2"></i>
+                Descargar Manual Ahora
+            </a>
+            <p class="text-xs text-orange-600 mt-2">
+                * Se abre en una nueva ventana
+            </p>
+        `;
+        successMessage.appendChild(manualDownloadDiv);
+        manualDownloadDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Function to resend email (calls webhook again)
+    function resendEmail() {
+        const button = event.target.closest('button');
+        if (!button) return;
+        const originalText = button.innerHTML;
+
+        button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Reenviando...';
+        button.disabled = true;
+
+        // Get form data (ensure it's still available or re-fetch)
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+
+        // It's possible these fields are no longer accessible if form is hidden/values cleared
+        // For resend, ideally we'd use the values already submitted.
+        // This simplified resend uses current values if available, or previously submitted if stored.
+        // For robustness, store email in a variable accessible to resendEmail if form clears.
+        // For this example, we assume email is still in the input or captured in `userEmail` scope for `showEmailSuccessMessage`
+        const emailToResend = emailInput ? emailInput.value : (typeof userEmail !== 'undefined' ? userEmail : ''); // Fallback
+
+        if (!emailToResend) {
+             button.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i>Error: Email no encontrado';
+             setTimeout(() => {
+                button.innerHTML = originalText;
+                button.disabled = false;
+            }, 3000);
+            return;
+        }
+
+
+        const formData = {
+            name: nameInput ? nameInput.value : 'Papá Novato', // Default name if input not found
+            email: emailToResend,
+            language: document.getElementById('language').value,
+            book_title: document.querySelector('input[name="book_title"]').value,
+            main_category: document.querySelector('input[name="main_category"]').value,
+            author: document.querySelector('input[name="author"]').value,
+            number_title: document.querySelector('input[name="number_title"]').value,
+            number_title_language: document.querySelector('input[name="number_title_language"]').value,
+            extra_folder_link: document.querySelector('input[name="extra_folder_link"]').value,
+            extra_pdf_link: document.querySelector('input[name="extra_pdf_link"]').value,
+            review_link: document.querySelector('input[name="review_link"]').value
+        };
+
+        // Actually resend the email
+        fetch('https://hook.integrator.boost.space/mqntylhrehljw4p5tkxjpxj28icglsot', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (response.ok) {
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>¡Reenviado!';
+                button.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                button.classList.add('bg-green-600');
+            } else {
+                throw new Error('Resend error');
+            }
+        })
+        .catch(error => {
+            console.error('Resend error:', error);
+            button.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i>Error al reenviar';
+            button.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+            button.classList.add('bg-red-600');
+        })
+        .finally(() => {
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.disabled = false;
+                button.classList.remove('bg-green-600', 'bg-red-600');
+                button.classList.add('bg-blue-600', 'hover:bg-blue-700');
+            }, 3000);
+        });
+    }
+
+    // Smooth scroll for CTA buttons
+    document.querySelectorAll('a[href="#leadForm"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetElement = document.getElementById('leadForm');
+            if (targetElement) {
+                // Check if form is hidden (by success message logic)
+                if (targetElement.style.pointerEvents === 'none') {
+                    // If form is "hidden", scroll to its container (the white card)
+                    targetElement.parentElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                } else {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                     // Focus first input field after scroll
+                    setTimeout(() => {
+                        const firstInput = targetElement.querySelector('input[type="text"], input[type="email"]');
+                        if (firstInput) {
+                            firstInput.focus();
+                        }
+                    }, 500); // Adjust delay as needed
+                }
+            }
+        });
+    });
+
+
+    // Email validation
+    document.getElementById('email').addEventListener('blur', function() {
+        const email = this.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const isValid = emailRegex.test(email);
+        const errorMsgElement = this.parentNode.querySelector('.error-message');
+
+        if (email && !isValid) {
+            this.classList.add('border-red-500');
+            this.classList.remove('border-gray-300');
+
+            if (!errorMsgElement) {
+                const errorMsg = document.createElement('p');
+                errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                errorMsg.innerHTML = '<i class="fas fa-exclamation-circle mr-1"></i>Por favor, introduce un email válido';
+                this.parentNode.insertBefore(errorMsg, this.nextSibling);
+            }
+        } else {
+            this.classList.remove('border-red-500');
+            this.classList.add('border-gray-300');
+            if (errorMsgElement) {
+                errorMsgElement.remove();
+            }
+        }
+    });
+
+    // Name validation
+    document.getElementById('name').addEventListener('blur', function() {
+        const name = this.value.trim();
+        const errorMsgElement = this.parentNode.querySelector('.error-message');
+
+        if (name && name.length < 2) {
+            this.classList.add('border-red-500');
+            this.classList.remove('border-gray-300');
+
+            if (!errorMsgElement) {
+                const errorMsg = document.createElement('p');
+                errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                errorMsg.innerHTML = '<i class="fas fa-exclamation-circle mr-1"></i>El nombre debe tener al menos 2 caracteres';
+                this.parentNode.insertBefore(errorMsg, this.nextSibling);
+            }
+        } else {
+            this.classList.remove('border-red-500');
+            this.classList.add('border-gray-300');
+            if (errorMsgElement) {
+                errorMsgElement.remove();
+            }
+        }
+    });
+
+    // Enhanced form submission validation (client-side before sending)
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+        let isValidClient = true; // Use a different variable name to avoid conflict with outer scope
+
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const name = nameInput.value.trim();
+        const email = emailInput.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Clear previous general error messages on button
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalButtonTextForValidation = submitButton.textContent.includes("REVISA TUS DATOS") ? "QUIERO MI GUÍA GRATIS" : submitButton.innerHTML;
+
+
+        // Name validation
+        const nameErrorMsg = nameInput.parentNode.querySelector('.error-message');
+        if (name.length < 2) {
+            isValidClient = false;
+            nameInput.classList.add('border-red-500');
+            if (!nameErrorMsg) {
+                const errorMsg = document.createElement('p');
+                errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                errorMsg.innerHTML = '<i class="fas fa-exclamation-circle mr-1"></i>El nombre debe tener al menos 2 caracteres';
+                nameInput.parentNode.insertBefore(errorMsg, nameInput.nextSibling);
+            }
+            if (isValidClient) nameInput.focus(); // Focus only the first error
+        } else if (nameErrorMsg) {
+            nameErrorMsg.remove();
+            nameInput.classList.remove('border-red-500');
+        }
+
+        // Email validation
+        const emailErrorMsg = emailInput.parentNode.querySelector('.error-message');
+        if (!emailRegex.test(email)) {
+            isValidClient = false;
+            emailInput.classList.add('border-red-500');
+            if (!emailErrorMsg) {
+                const errorMsg = document.createElement('p');
+                errorMsg.className = 'error-message text-red-500 text-sm mt-1';
+                errorMsg.innerHTML = '<i class="fas fa-exclamation-circle mr-1"></i>Por favor, introduce un email válido';
+                emailInput.parentNode.insertBefore(errorMsg, emailInput.nextSibling);
+            }
+            if (isValidClient && name.length >=2) emailInput.focus(); // Focus if name was ok
+        } else if (emailErrorMsg) {
+            emailErrorMsg.remove();
+            emailInput.classList.remove('border-red-500');
+        }
+
+        if (!isValidClient) {
+            e.preventDefault(); // Prevent submission
+
+            //const submitButton = this.querySelector('button[type="submit"]');
+            //const originalText = submitButton.innerHTML; // This might be "SENDING..." if logic is complex
+
+            submitButton.innerHTML = '<i class="fas fa-exclamation-triangle mr-2"></i>REVISA TUS DATOS';
+            submitButton.classList.remove('from-blue-600', 'to-purple-600', 'bg-green-500', 'bg-red-500');
+            submitButton.classList.add('bg-orange-500');
+            submitButton.disabled = false; // Re-enable if it was disabled by async flow
+
+            setTimeout(() => {
+                // Only reset if it's still the error message and not "SENDING..."
+                if (submitButton.innerHTML.includes("REVISA TUS DATOS")) {
+                    submitButton.innerHTML = '<i class="fas fa-download mr-2"></i>QUIERO MI GUÍA GRATIS';
+                    submitButton.classList.remove('bg-orange-500');
+                    submitButton.classList.add('from-blue-600', 'to-purple-600');
+                }
+            }, 3000);
+        }
+        // If isValidClient is true, the default async submission logic will continue
+    });
+</script>
+
+</body>
+</html>
